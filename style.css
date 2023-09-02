@@ -2,10 +2,25 @@
   margin: 0;
   padding: 0;
   font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.divider {
+  border-bottom: solid 1px #ececec;
+  margin: 10px 0;
+}
+.dark-divider {
+  border-bottom: solid 1px #bebebe;
+  margin: 10px 0;
 }
 
 /* Nav styles */
@@ -83,16 +98,14 @@ nav {
   height: 8px;
   background: limegreen;
   top: 0;
-  right: 0;
+  right: 4px;
   border: 2px solid #fff
 }
-
-/* Main content styles */
 
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 13px 5%;
+  padding: 20px 5%;
 }
 
 .left-sidebar {
@@ -107,6 +120,10 @@ nav {
   position: sticky;
   top: 70px;
   align-self: flex-start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  color: #626262;
 }
 
 .main-content {
@@ -114,13 +131,11 @@ nav {
 }
 
 .left-links a, .shortcut-links a {
-  text-decoration: none;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
   color: #626262;
   width: fit-content;
-  text-transform: capitalize;
   font-weight: 600;
 }
 
@@ -134,9 +149,6 @@ nav {
   font-weight: normal;
 }
 
-.left-links {
-  border-bottom: 1px solid #ccc;
-}
 
 .shortcut-links a {
   font-weight: normal;
@@ -153,4 +165,181 @@ nav {
   text-transform: capitalize;
   color: #626262;
   font-weight: 500;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.sidebar-title h4 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sidebar-title a {
+  color: #1876f2;
+  font-size: 12px;
+}
+
+.event {
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.event-left {
+  border-radius: 10px;
+  height: 65px;
+  width: 65px;
+  margin-right: 15px;
+  padding-top: 10px;
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.event-left h3 {
+  font-size: 34px;
+}
+
+.event-left span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #d61111;
+  color: #fff;
+  padding: 4px 0;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.event-right h4 {
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.event-right p {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.event-right a {
+  font-size: 12px;
+  color:#1876f2;
+}
+
+.sidebar-ads {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+img.hidden {
+  display: none;
+}
+
+.online-user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  margin: 10px 0;
+}
+
+.online-user img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.online-user .online {
+  left: 30px;
+  top: unset;
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.online-user p {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.online-list.hidden {
+  display: none;
+  height: 100vh;
+}
+
+/* Main content styles */
+.main-content {
+  height: 100vh;
+}
+
+.stories {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.story {
+  flex-basis: 18%;
+  padding-top: 32%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.story img {
+  position: absolute;
+  width: 45px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  border: 2px solid #1876f2;
+}
+
+.story:first-child img {
+  border: none;
+  top: unset;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  width: 35px;
+}
+
+.story p {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+.post-story {
+  text-transform: capitalize;
+}
+
+.story-1 {
+  background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("images/status-1.png");
+}
+.story-2 {
+  background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("images/status-2.png");
+}
+.story-3 {
+  background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("images/status-3.png");
+}
+.story-4 {
+  background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("images/status-4.png");
+}
+.story-5 {
+  background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url("images/status-5.png");
 }
